@@ -25,3 +25,4 @@ fn string_uppercase(data: &mut String) {
 
     println!("{}", data);
 }
+
