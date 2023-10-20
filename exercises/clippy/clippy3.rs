@@ -4,8 +4,9 @@
 //
 // Execute `rustlings hint clippy3` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
 
+
+/*
 #[allow(unused_variables, unused_assignments)]
 fn main() {
     let my_option: Option<()> = None;
@@ -29,3 +30,33 @@ fn main() {
     value_b = value_a;
     println!("value a: {}; value b: {}", value_a, value_b);
 }
+ */
+
+
+fn main() {
+    let my_option: Option<()> = None;
+    if my_option.is_none() {
+        // You don't need to call unwrap on a None value, as it will panic.
+        // Instead, you can return early or handle the None case as needed.
+        return;
+    }
+
+    // In this array, you have a missing comma between elements.
+    let my_arr = &[
+        -1, -2, -3,
+        -4, -5, -6,
+    ];
+    println!("My array! Here it is: {:?}", my_arr);
+
+    // To empty the vector, use the `clear()` method.
+    let mut my_empty_vec = vec![1, 2, 3, 4, 5];
+    my_empty_vec.clear();
+    println!("This Vec is empty, see? {:?}", my_empty_vec);
+
+    // To swap the values, you can use the `std::mem::swap` function.
+    let mut value_a = 45;
+    let mut value_b = 66;
+    std::mem::swap(&mut value_a, &mut value_b);
+    println!("value a: {}; value b: {}", value_a, value_b);
+}
+

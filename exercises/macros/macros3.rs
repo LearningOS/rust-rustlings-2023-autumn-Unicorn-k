@@ -5,8 +5,8 @@
 // Execute `rustlings hint macros3` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
+/*
 mod macros {
     macro_rules! my_macro {
         () => {
@@ -17,4 +17,22 @@ mod macros {
 
 fn main() {
     my_macro!();
+}
+ */
+
+
+ mod macros {
+    macro_rules! my_macro {
+        () => {
+            println!("Check out my macro!");
+        };
+    }
+
+    pub fn invoke_my_macro() {
+        my_macro!();
+    }
+}
+
+fn main() {
+    macros::invoke_my_macro(); // Now you can use the module name to access the macro
 }
